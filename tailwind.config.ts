@@ -47,15 +47,20 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        // Urban Sketchers Oslo brand colors
+        sketch: {
+          blue: "hsl(var(--sketch-blue))", // Oslo fjord blue
+          charcoal: "hsl(var(--sketch-charcoal))", // Drawing charcoal
+          paper: "hsl(var(--sketch-paper))", // Sketch paper cream
+          ink: "hsl(var(--sketch-ink))", // Drawing ink
+          sunset: "hsl(var(--sketch-sunset))", // Oslo sunset orange
+          forest: "hsl(var(--sketch-forest))", // Norwegian forest green
+        },
+        oslo: {
+          fjord: "hsl(var(--oslo-fjord))",
+          stone: "hsl(var(--oslo-stone))",
+          aurora: "hsl(var(--oslo-aurora))",
+          snow: "hsl(var(--oslo-snow))",
         },
       },
       borderRadius: {
