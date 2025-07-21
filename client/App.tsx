@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Join from "./pages/Join";
+import Test from "./pages/Test";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
