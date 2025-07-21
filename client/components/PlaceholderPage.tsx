@@ -15,13 +15,16 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
         <div className="text-center max-w-md px-4">
           <div className="mb-6">
             <Construction className="h-16 w-16 text-sketch-blue mx-auto mb-4" />
-            <h1 className="text-3xl font-bold text-sketch-charcoal mb-2">{title}</h1>
+            <h1 className="text-3xl font-bold text-sketch-charcoal mb-2">
+              {title}
+            </h1>
             <p className="text-muted-foreground">{description}</p>
           </div>
-          
+
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              This page is coming soon! We're working on bringing you amazing content about Oslo's sketching community.
+              This page is coming soon! We're working on bringing you amazing
+              content about Oslo's sketching community.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild variant="outline">
@@ -30,7 +33,10 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
                   Back to Home
                 </Link>
               </Button>
-              <Button asChild className="bg-sketch-blue hover:bg-sketch-blue/90">
+              <Button
+                asChild
+                className="bg-sketch-blue hover:bg-sketch-blue/90"
+              >
                 <Link to="/join">Join Our Community</Link>
               </Button>
             </div>

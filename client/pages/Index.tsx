@@ -2,17 +2,17 @@ import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Palette, 
-  MapPin, 
-  Calendar, 
-  Users, 
-  Camera, 
-  ArrowRight, 
+import {
+  Palette,
+  MapPin,
+  Calendar,
+  Users,
+  Camera,
+  ArrowRight,
   Instagram,
   Heart,
   Clock,
-  Compass
+  Compass,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -23,22 +23,22 @@ export default function Index() {
       date: "Saturday, Jan 4",
       time: "10:00 AM",
       location: "Akershus Fortress",
-      attendees: 18
+      attendees: 18,
     },
     {
       title: "Winter Portraits Workshop",
       date: "Sunday, Jan 12",
       time: "1:00 PM",
       location: "Tjuvholmen Art Museum",
-      attendees: 10
+      attendees: 10,
     },
     {
       title: "Sketching the Northern Lights",
       date: "Friday, Jan 17",
       time: "7:30 PM",
       location: "Ekeberg Park",
-      attendees: 22
-    }
+      attendees: 22,
+    },
   ];
 
   const communityHighlights = [
@@ -46,20 +46,20 @@ export default function Index() {
       artist: "Nina K.",
       artwork: "Oslo Central Station",
       medium: "Watercolor & Ink",
-      likes: 47
+      likes: 47,
     },
     {
-      artist: "Erik M.", 
+      artist: "Erik M.",
       artwork: "Aker Brygge Morning",
       medium: "Pencil Sketch",
-      likes: 32
+      likes: 32,
     },
     {
       artist: "Sara L.",
       artwork: "Holmenkollen View",
       medium: "Digital Sketch",
-      likes: 58
-    }
+      likes: 58,
+    },
   ];
 
   return (
@@ -73,32 +73,39 @@ export default function Index() {
               <Palette className="h-3 w-3 mr-1" />
               Oslo Chapter
             </Badge>
-            
+
             <h1 className="text-4xl lg:text-6xl font-bold text-sketch-charcoal mb-6 leading-tight">
-              Drawing Oslo,{" "}
-              <span className="text-sketch-blue">One Sketch</span>{" "}
+              Drawing Oslo, <span className="text-sketch-blue">One Sketch</span>{" "}
               at a Time
             </h1>
-            
+
             <p className="text-lg lg:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Join our vibrant community of artists capturing the essence of Oslo through on-location drawing. 
-              From the fjord to the forests, we sketch the stories of our beautiful city.
+              Join our vibrant community of artists capturing the essence of
+              Oslo through on-location drawing. From the fjord to the forests,
+              we sketch the stories of our beautiful city.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild size="lg" className="bg-sketch-blue hover:bg-sketch-blue/90 text-white">
+              <Button
+                asChild
+                size="lg"
+                className="bg-sketch-blue hover:bg-sketch-blue/90 text-white"
+              >
                 <Link to="/join">
                   Join Our Community
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-sketch-blue text-sketch-blue hover:bg-sketch-blue/10">
-                <Link to="/events">
-                  View Upcoming Events
-                </Link>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-sketch-blue text-sketch-blue hover:bg-sketch-blue/10"
+              >
+                <Link to="/events">View Upcoming Events</Link>
               </Button>
             </div>
-            
+
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-foreground/60">
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
@@ -125,7 +132,8 @@ export default function Index() {
               The Urban Sketchers Way
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              We follow the Urban Sketchers manifesto, drawing on location and sharing our perspective of Oslo with the world.
+              We follow the Urban Sketchers manifesto, drawing on location and
+              sharing our perspective of Oslo with the world.
             </p>
           </div>
 
@@ -135,9 +143,12 @@ export default function Index() {
                 <div className="mb-4 bg-sketch-blue/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto">
                   <Compass className="h-6 w-6 text-sketch-blue" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">Draw on Location</h3>
+                <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">
+                  Draw on Location
+                </h3>
                 <p className="text-foreground/70">
-                  We capture what we see from direct observation, whether indoors or outdoors across Oslo.
+                  We capture what we see from direct observation, whether
+                  indoors or outdoors across Oslo.
                 </p>
               </CardContent>
             </Card>
@@ -147,9 +158,12 @@ export default function Index() {
                 <div className="mb-4 bg-sketch-sunset/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto">
                   <Camera className="h-6 w-6 text-sketch-sunset" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">Tell Stories</h3>
+                <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">
+                  Tell Stories
+                </h3>
                 <p className="text-foreground/70">
-                  Our drawings document Oslo's places and moments, creating a visual diary of our city.
+                  Our drawings document Oslo's places and moments, creating a
+                  visual diary of our city.
                 </p>
               </CardContent>
             </Card>
@@ -159,9 +173,12 @@ export default function Index() {
                 <div className="mb-4 bg-sketch-forest/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto">
                   <Users className="h-6 w-6 text-sketch-forest" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">Support Each Other</h3>
+                <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">
+                  Support Each Other
+                </h3>
                 <p className="text-foreground/70">
-                  We draw together, learn from each other, and share our work to inspire the community.
+                  We draw together, learn from each other, and share our work to
+                  inspire the community.
                 </p>
               </CardContent>
             </Card>
@@ -177,7 +194,9 @@ export default function Index() {
               <h2 className="text-3xl lg:text-4xl font-bold text-sketch-charcoal mb-2">
                 Upcoming Events
               </h2>
-              <p className="text-foreground/70">Join us for our next sketching adventures around Oslo</p>
+              <p className="text-foreground/70">
+                Join us for our next sketching adventures around Oslo
+              </p>
             </div>
             <Button asChild variant="outline" className="hidden sm:flex">
               <Link to="/events">
@@ -192,7 +211,10 @@ export default function Index() {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-sketch-blue/10 text-sketch-blue">
+                    <Badge
+                      variant="secondary"
+                      className="bg-sketch-blue/10 text-sketch-blue"
+                    >
                       {event.date}
                     </Badge>
                     <div className="flex items-center text-sm text-foreground/60">
@@ -200,11 +222,11 @@ export default function Index() {
                       {event.attendees}
                     </div>
                   </div>
-                  
+
                   <h3 className="font-semibold text-lg mb-2 text-sketch-charcoal">
                     {event.title}
                   </h3>
-                  
+
                   <div className="space-y-2 text-sm text-foreground/70">
                     <div className="flex items-center">
                       <Clock className="h-3 w-3 mr-2" />
@@ -215,8 +237,11 @@ export default function Index() {
                       {event.location}
                     </div>
                   </div>
-                  
-                  <Button className="w-full mt-4 bg-sketch-blue hover:bg-sketch-blue/90" size="sm">
+
+                  <Button
+                    className="w-full mt-4 bg-sketch-blue hover:bg-sketch-blue/90"
+                    size="sm"
+                  >
                     Join Event
                   </Button>
                 </CardContent>
@@ -243,7 +268,9 @@ export default function Index() {
               <h2 className="text-3xl lg:text-4xl font-bold text-sketch-charcoal mb-2">
                 Community Highlights
               </h2>
-              <p className="text-foreground/70">Recent sketches from our talented Oslo artists</p>
+              <p className="text-foreground/70">
+                Recent sketches from our talented Oslo artists
+              </p>
             </div>
             <Button asChild variant="outline" className="hidden sm:flex">
               <Link to="/gallery">
@@ -255,26 +282,35 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {communityHighlights.map((highlight, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all cursor-pointer">
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-all cursor-pointer"
+              >
                 <CardContent className="p-0">
                   <div className="aspect-square bg-gradient-to-br from-sketch-paper to-oslo-snow rounded-t-lg relative overflow-hidden">
                     <div className="absolute inset-0 bg-sketch-charcoal/5 flex items-center justify-center">
                       <div className="text-center">
                         <Palette className="h-12 w-12 text-sketch-blue/40 mx-auto mb-2" />
-                        <p className="text-sm text-foreground/60">"{highlight.artwork}"</p>
+                        <p className="text-sm text-foreground/60">
+                          "{highlight.artwork}"
+                        </p>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-semibold text-sketch-charcoal">by {highlight.artist}</h3>
+                      <h3 className="font-semibold text-sketch-charcoal">
+                        by {highlight.artist}
+                      </h3>
                       <div className="flex items-center text-sm text-foreground/60">
                         <Heart className="h-3 w-3 mr-1 text-red-500" />
                         {highlight.likes}
                       </div>
                     </div>
-                    <p className="text-sm text-foreground/70">{highlight.medium}</p>
+                    <p className="text-sm text-foreground/70">
+                      {highlight.medium}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -300,19 +336,33 @@ export default function Index() {
               Ready to Start Sketching Oslo?
             </h2>
             <p className="text-lg mb-8 text-blue-100">
-              Join our welcoming community and discover Oslo through the eyes of an artist. 
-              All skill levels welcome – bring your curiosity and we'll provide the rest.
+              Join our welcoming community and discover Oslo through the eyes of
+              an artist. All skill levels welcome – bring your curiosity and
+              we'll provide the rest.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-sketch-blue hover:bg-gray-50">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-sketch-blue hover:bg-gray-50"
+              >
                 <Link to="/join">
                   Join Our Community
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                <a href="https://instagram.com/urbansketchersoslo" target="_blank" rel="noopener noreferrer">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white/10"
+              >
+                <a
+                  href="https://instagram.com/urbansketchersoslo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Instagram className="mr-2 h-4 w-4" />
                   Follow on Instagram
                 </a>

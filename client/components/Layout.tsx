@@ -1,6 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Palette, Calendar, Users, Camera, Instagram, Facebook, Mail } from "lucide-react";
+import {
+  Menu,
+  X,
+  Palette,
+  Calendar,
+  Users,
+  Camera,
+  Instagram,
+  Facebook,
+  Mail,
+} from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +48,9 @@ export function Layout({ children }: LayoutProps) {
                 <Palette className="h-6 w-6 text-sketch-blue" />
               </div>
               <div className="hidden sm:block">
-                <div className="text-lg font-bold text-sketch-charcoal">Urban Sketchers</div>
+                <div className="text-lg font-bold text-sketch-charcoal">
+                  Urban Sketchers
+                </div>
                 <div className="text-sm text-sketch-blue -mt-1">Oslo</div>
               </div>
             </Link>
@@ -53,7 +65,7 @@ export function Layout({ children }: LayoutProps) {
                     "text-sm font-medium transition-colors hover:text-sketch-blue",
                     isActivePath(item.href)
                       ? "text-sketch-blue"
-                      : "text-foreground/80"
+                      : "text-foreground/80",
                   )}
                 >
                   {item.name}
@@ -63,7 +75,11 @@ export function Layout({ children }: LayoutProps) {
 
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button asChild size="sm" className="bg-sketch-blue hover:bg-sketch-blue/90">
+              <Button
+                asChild
+                size="sm"
+                className="bg-sketch-blue hover:bg-sketch-blue/90"
+              >
                 <Link to="/join">Join Community</Link>
               </Button>
             </div>
@@ -95,14 +111,18 @@ export function Layout({ children }: LayoutProps) {
                       "text-sm font-medium py-2 transition-colors hover:text-sketch-blue",
                       isActivePath(item.href)
                         ? "text-sketch-blue"
-                        : "text-foreground/80"
+                        : "text-foreground/80",
                     )}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <Button asChild size="sm" className="mt-4 bg-sketch-blue hover:bg-sketch-blue/90 w-fit">
+                <Button
+                  asChild
+                  size="sm"
+                  className="mt-4 bg-sketch-blue hover:bg-sketch-blue/90 w-fit"
+                >
                   <Link to="/join" onClick={() => setIsMenuOpen(false)}>
                     Join Community
                   </Link>
@@ -114,9 +134,7 @@ export function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1">
-        {children}
-      </main>
+      <main className="flex-1">{children}</main>
 
       {/* Footer */}
       <footer className="bg-sketch-ink text-sketch-paper">
@@ -130,18 +148,23 @@ export function Layout({ children }: LayoutProps) {
                 </div>
                 <div>
                   <div className="text-lg font-bold">Urban Sketchers Oslo</div>
-                  <div className="text-sm text-sketch-paper/80">Drawing Oslo, one sketch at a time</div>
+                  <div className="text-sm text-sketch-paper/80">
+                    Drawing Oslo, one sketch at a time
+                  </div>
                 </div>
               </div>
               <p className="text-sm text-sketch-paper/70 max-w-md leading-relaxed">
-                Join our vibrant community of artists who capture the essence of Oslo through on-location drawing. 
-                From fjord views to city streets, we sketch the stories of our beautiful city.
+                Join our vibrant community of artists who capture the essence of
+                Oslo through on-location drawing. From fjord views to city
+                streets, we sketch the stories of our beautiful city.
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-semibold mb-4 text-sketch-paper">Quick Links</h3>
+              <h3 className="font-semibold mb-4 text-sketch-paper">
+                Quick Links
+              </h3>
               <ul className="space-y-2 text-sm">
                 {navigation.map((item) => (
                   <li key={item.name}>
@@ -160,13 +183,25 @@ export function Layout({ children }: LayoutProps) {
             <div>
               <h3 className="font-semibold mb-4 text-sketch-paper">Connect</h3>
               <div className="flex space-x-3">
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
+                >
                   <Instagram className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
+                >
                   <Facebook className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
+                >
                   <Mail className="h-4 w-4" />
                 </Button>
               </div>
@@ -178,7 +213,10 @@ export function Layout({ children }: LayoutProps) {
           </div>
 
           <div className="border-t border-sketch-paper/20 mt-8 pt-6 text-center text-sm text-sketch-paper/60">
-            <p>&copy; 2024 Urban Sketchers Oslo. Part of the global Urban Sketchers community.</p>
+            <p>
+              &copy; 2024 Urban Sketchers Oslo. Part of the global Urban
+              Sketchers community.
+            </p>
           </div>
         </div>
       </footer>
