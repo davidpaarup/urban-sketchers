@@ -18,8 +18,14 @@ export function useUpcomingEvents() {
 export function usePastEvents() {
   return useQuery({
     queryKey: ['events', 'past'],
-    queryFn: () => client.fetch<Event[]>(pastEventsQuery),
+    queryFn: () => {
+      if (!client) {
+        throw new Error('Sanity client not configured')
+      }
+      return client.fetch<Event[]>(pastEventsQuery)
+    },
     staleTime: 10 * 60 * 1000, // 10 minutes
+    enabled: !!client, // Only run query if client is available
   })
 }
 
