@@ -4,8 +4,14 @@ import { client, eventsQuery, pastEventsQuery, Event } from '@/lib/sanity'
 export function useUpcomingEvents() {
   return useQuery({
     queryKey: ['events', 'upcoming'],
-    queryFn: () => client.fetch<Event[]>(eventsQuery),
+    queryFn: () => {
+      if (!client) {
+        throw new Error('Sanity client not configured')
+      }
+      return client.fetch<Event[]>(eventsQuery)
+    },
     staleTime: 5 * 60 * 1000, // 5 minutes
+    enabled: !!client, // Only run query if client is available
   })
 }
 
