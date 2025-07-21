@@ -9,50 +9,50 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* Base theme colors */
-    --background: 253 250 248; /* sketch-paper inspired */
-    --foreground: 28 25 23; /* sketch-charcoal */
+    /* Base theme colors - HSL format */
+    --background: 30 40% 98%; /* sketch-paper inspired */
+    --foreground: 25 12% 20%; /* sketch-charcoal */
 
-    --card: 255 255 255;
-    --card-foreground: 28 25 23;
+    --card: 0 0% 100%;
+    --card-foreground: 25 12% 20%;
 
-    --popover: 255 255 255;
-    --popover-foreground: 28 25 23;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 12% 20%;
 
-    --primary: 37 99 235; /* sketch-blue */
-    --primary-foreground: 255 255 255;
+    --primary: 220 91% 55%; /* sketch-blue */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 245 245 244;
-    --secondary-foreground: 68 64 60;
+    --secondary: 20 14% 96%;
+    --secondary-foreground: 25 8% 24%;
 
-    --muted: 245 245 244;
-    --muted-foreground: 120 113 108;
+    --muted: 20 14% 96%;
+    --muted-foreground: 25 8% 45%;
 
-    --accent: 251 146 60; /* sketch-sunset */
-    --accent-foreground: 28 25 23;
+    --accent: 25 95% 60%; /* sketch-sunset */
+    --accent-foreground: 25 12% 20%;
 
-    --destructive: 239 68 68;
-    --destructive-foreground: 255 255 255;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 231 229 228;
-    --input: 231 229 228;
-    --ring: 37 99 235;
+    --border: 20 13% 91%;
+    --input: 20 13% 91%;
+    --ring: 220 91% 55%;
 
     --radius: 0.5rem;
 
-    /* Urban Sketchers Oslo brand colors */
-    --sketch-blue: 37 99 235; /* Oslo fjord blue */
-    --sketch-charcoal: 28 25 23; /* Drawing charcoal */
-    --sketch-paper: 253 250 248; /* Sketch paper cream */
-    --sketch-ink: 17 24 39; /* Drawing ink */
-    --sketch-sunset: 251 146 60; /* Oslo sunset orange */
-    --sketch-forest: 34 197 94; /* Norwegian forest green */
+    /* Urban Sketchers Oslo brand colors - HSL format */
+    --sketch-blue: 220 91% 55%; /* Oslo fjord blue */
+    --sketch-charcoal: 25 12% 20%; /* Drawing charcoal */
+    --sketch-paper: 30 40% 98%; /* Sketch paper cream */
+    --sketch-ink: 220 43% 11%; /* Drawing ink */
+    --sketch-sunset: 25 95% 60%; /* Oslo sunset orange */
+    --sketch-forest: 144 83% 58%; /* Norwegian forest green */
 
-    /* Oslo inspired colors */
-    --oslo-fjord: 59 130 246; /* Oslo fjord blue */
-    --oslo-stone: 120 113 108; /* Oslo stone gray */
-    --oslo-aurora: 167 243 208; /* Northern lights green */
-    --oslo-snow: 248 250 252; /* Norwegian snow white */
+    /* Oslo inspired colors - HSL format */
+    --oslo-fjord: 212 100% 60%; /* Oslo fjord blue */
+    --oslo-stone: 25 8% 45%; /* Oslo stone gray */
+    --oslo-aurora: 150 77% 84%; /* Northern lights green */
+    --oslo-snow: 210 20% 98%; /* Norwegian snow white */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -65,47 +65,47 @@
   }
 
   .dark {
-    /* Dark theme with sketching inspiration */
-    --background: 17 24 39; /* sketch-ink */
-    --foreground: 253 250 248; /* sketch-paper */
+    /* Dark theme with sketching inspiration - HSL format */
+    --background: 220 43% 11%; /* sketch-ink */
+    --foreground: 30 40% 98%; /* sketch-paper */
 
-    --card: 30 41 59;
-    --card-foreground: 253 250 248;
+    --card: 220 27% 18%;
+    --card-foreground: 30 40% 98%;
 
-    --popover: 30 41 59;
-    --popover-foreground: 253 250 248;
+    --popover: 220 27% 18%;
+    --popover-foreground: 30 40% 98%;
 
-    --primary: 59 130 246; /* oslo-fjord */
-    --primary-foreground: 17 24 39;
+    --primary: 212 100% 60%; /* oslo-fjord */
+    --primary-foreground: 220 43% 11%;
 
-    --secondary: 51 65 85;
-    --secondary-foreground: 226 232 240;
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 91%;
 
-    --muted: 51 65 85;
-    --muted-foreground: 148 163 184;
+    --muted: 215 25% 27%;
+    --muted-foreground: 217 10% 64%;
 
-    --accent: 251 146 60; /* sketch-sunset */
-    --accent-foreground: 17 24 39;
+    --accent: 25 95% 60%; /* sketch-sunset */
+    --accent-foreground: 220 43% 11%;
 
-    --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 51 65 85;
-    --input: 51 65 85;
-    --ring: 59 130 246;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 212 100% 60%;
 
-    /* Dark theme brand colors */
-    --sketch-blue: 59 130 246;
-    --sketch-charcoal: 253 250 248;
-    --sketch-paper: 30 41 59;
-    --sketch-ink: 253 250 248;
-    --sketch-sunset: 251 146 60;
-    --sketch-forest: 52 211 153;
+    /* Dark theme brand colors - HSL format */
+    --sketch-blue: 212 100% 60%;
+    --sketch-charcoal: 30 40% 98%;
+    --sketch-paper: 220 27% 18%;
+    --sketch-ink: 30 40% 98%;
+    --sketch-sunset: 25 95% 60%;
+    --sketch-forest: 144 83% 64%;
 
-    --oslo-fjord: 59 130 246;
-    --oslo-stone: 148 163 184;
-    --oslo-aurora: 52 211 153;
-    --oslo-snow: 30 41 59;
+    --oslo-fjord: 212 100% 60%;
+    --oslo-stone: 217 10% 64%;
+    --oslo-aurora: 144 83% 64%;
+    --oslo-snow: 220 27% 18%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
