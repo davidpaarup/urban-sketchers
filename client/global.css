@@ -9,81 +9,104 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base theme colors */
+    --background: 253 250 248; /* sketch-paper inspired */
+    --foreground: 28 25 23; /* sketch-charcoal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255;
+    --card-foreground: 28 25 23;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255;
+    --popover-foreground: 28 25 23;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 37 99 235; /* sketch-blue */
+    --primary-foreground: 255 255 255;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 245 245 244;
+    --secondary-foreground: 68 64 60;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 245 245 244;
+    --muted-foreground: 120 113 108;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 251 146 60; /* sketch-sunset */
+    --accent-foreground: 28 25 23;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 231 229 228;
+    --input: 231 229 228;
+    --ring: 37 99 235;
 
     --radius: 0.5rem;
 
+    /* Urban Sketchers Oslo brand colors */
+    --sketch-blue: 37 99 235; /* Oslo fjord blue */
+    --sketch-charcoal: 28 25 23; /* Drawing charcoal */
+    --sketch-paper: 253 250 248; /* Sketch paper cream */
+    --sketch-ink: 17 24 39; /* Drawing ink */
+    --sketch-sunset: 251 146 60; /* Oslo sunset orange */
+    --sketch-forest: 34 197 94; /* Norwegian forest green */
+
+    /* Oslo inspired colors */
+    --oslo-fjord: 59 130 246; /* Oslo fjord blue */
+    --oslo-stone: 120 113 108; /* Oslo stone gray */
+    --oslo-aurora: 167 243 208; /* Northern lights green */
+    --oslo-snow: 248 250 252; /* Norwegian snow white */
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark theme with sketching inspiration */
+    --background: 17 24 39; /* sketch-ink */
+    --foreground: 253 250 248; /* sketch-paper */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 41 59;
+    --card-foreground: 253 250 248;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 41 59;
+    --popover-foreground: 253 250 248;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 59 130 246; /* oslo-fjord */
+    --primary-foreground: 17 24 39;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 51 65 85;
+    --secondary-foreground: 226 232 240;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 251 146 60; /* sketch-sunset */
+    --accent-foreground: 17 24 39;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 59 130 246;
+
+    /* Dark theme brand colors */
+    --sketch-blue: 59 130 246;
+    --sketch-charcoal: 253 250 248;
+    --sketch-paper: 30 41 59;
+    --sketch-ink: 253 250 248;
+    --sketch-sunset: 251 146 60;
+    --sketch-forest: 52 211 153;
+
+    --oslo-fjord: 59 130 246;
+    --oslo-stone: 148 163 184;
+    --oslo-aurora: 52 211 153;
+    --oslo-snow: 30 41 59;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
