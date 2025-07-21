@@ -1,18 +1,14 @@
+import "./global.css";
 import { createRoot } from "react-dom/client";
 
-const App = () => (
-  <div style={{ 
-    minHeight: "100vh", 
-    backgroundColor: "red", 
-    display: "flex", 
-    alignItems: "center", 
-    justifyContent: "center",
-    color: "white",
-    fontSize: "2rem",
-    fontWeight: "bold"
-  }}>
-    BASIC TEST - APP IS WORKING
-  </div>
-);
+const App = () => {
+  return (
+    <div className="min-h-screen bg-sketch-blue flex items-center justify-center">
+      <div className="text-white text-4xl font-bold">
+        Urban Sketchers Oslo - Test
+      </div>
+    </div>
+  );
+};
 
 createRoot(document.getElementById("root")!).render(<App />);
