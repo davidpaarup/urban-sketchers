@@ -19,25 +19,25 @@ import { Link } from "react-router-dom";
 export default function Index() {
   const upcomingEvents = [
     {
-      title: "Weekend Sketch Walk: Vigeland Park",
-      date: "Saturday, Dec 14",
-      time: "11:00 AM",
-      location: "Vigeland Sculpture Park",
-      attendees: 12
+      title: "New Year Sketch Walk: Akershus Fortress",
+      date: "Saturday, Jan 4",
+      time: "10:00 AM",
+      location: "Akershus Fortress",
+      attendees: 18
     },
     {
-      title: "Urban Safari: Grünerløkka",
-      date: "Sunday, Dec 22",
-      time: "2:00 PM", 
-      location: "Grünerløkka District",
-      attendees: 8
+      title: "Winter Portraits Workshop",
+      date: "Sunday, Jan 12",
+      time: "1:00 PM",
+      location: "Tjuvholmen Art Museum",
+      attendees: 10
     },
     {
-      title: "Winter Evening Sketching",
-      date: "Friday, Dec 27",
-      time: "6:00 PM",
-      location: "Oslo Opera House",
-      attendees: 15
+      title: "Sketching the Northern Lights",
+      date: "Friday, Jan 17",
+      time: "7:30 PM",
+      location: "Ekeberg Park",
+      attendees: 22
     }
   ];
 
