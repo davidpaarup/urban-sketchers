@@ -89,17 +89,17 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-sketch-blue/10 text-sketch-blue border-sketch-blue/20 hover:bg-sketch-blue/20">
               <Palette className="h-3 w-3 mr-1" />
-              Oslo Chapter
+              Our Chapter
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-sketch-charcoal mb-6 leading-tight">
-              Drawing Oslo, <span className="text-sketch-blue">One Sketch</span>{" "}
+              Drawing our location, <span className="text-sketch-blue">One Sketch</span>{" "}
               at a Time
             </h1>
 
             <p className="text-lg lg:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
               Join our vibrant community of artists capturing the essence of
-              Oslo through on-location drawing. From the fjord to the forests,
+              our location through on-location drawing. From the fjord to the forests,
               we sketch the stories of our beautiful city.
             </p>
 
@@ -135,7 +135,7 @@ export default function Index() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>All Over Oslo</span>
+                <span>All Over our location</span>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function Index() {
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
               We follow the Urban Sketchers manifesto, drawing on location and
-              sharing our perspective of Oslo with the world.
+              sharing our perspective of our location with the world.
             </p>
           </div>
 
@@ -166,7 +166,7 @@ export default function Index() {
                 </h3>
                 <p className="text-foreground/70">
                   We capture what we see from direct observation, whether
-                  indoors or outdoors across Oslo.
+                  indoors or outdoors across our location.
                 </p>
               </CardContent>
             </Card>
@@ -180,7 +180,7 @@ export default function Index() {
                   Tell Stories
                 </h3>
                 <p className="text-foreground/70">
-                  Our drawings document Oslo's places and moments, creating a
+                  Our drawings document our location's places and moments, creating a
                   visual diary of our city.
                 </p>
               </CardContent>
@@ -213,7 +213,7 @@ export default function Index() {
                 Upcoming Events
               </h2>
               <p className="text-foreground/70">
-                Join us for our next sketching adventures around Oslo
+                Join us for our next sketching adventures around our location
               </p>
               {error && (
                 <p className="text-sm text-orange-600 mt-1">
@@ -301,7 +301,7 @@ export default function Index() {
                 Community Highlights
               </h2>
               <p className="text-foreground/70">
-                Recent sketches from our talented Oslo artists
+                Recent sketches from our talented artists
               </p>
             </div>
             <Button asChild variant="outline" className="hidden sm:flex">
@@ -365,10 +365,10 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ready to Start Sketching Oslo?
+              Ready to Start Sketching our location?
             </h2>
             <p className="text-lg mb-8 text-blue-100">
-              Join our welcoming community and discover Oslo through the eyes of
+              Join our welcoming community and discover our location through the eyes of
               an artist. All skill levels welcome – bring your curiosity and
               we'll provide the rest.
             </p>
@@ -391,7 +391,7 @@ export default function Index() {
                 className="border-white text-white hover:bg-white/10"
               >
                 <a
-                  href="https://instagram.com/urbansketchersoslo"
+                  href="https://instagram.com/urbansketchers"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

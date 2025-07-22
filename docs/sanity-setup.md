@@ -1,11 +1,11 @@
-# Sanity CMS Setup for Urban Sketchers Oslo
+# Sanity CMS Setup for Urban Sketchers
 
 ## Quick Setup Guide
 
 ### 1. Create Sanity Project
 
 ```bash
-npm create sanity@latest -- --template clean --create-project "Urban Sketchers Oslo" --dataset production
+npm create sanity@latest -- --template clean --create-project "Urban Sketchers" --dataset production
 ```
 
 ### 2. Install Sanity Studio

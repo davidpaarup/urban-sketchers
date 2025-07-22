@@ -32,7 +32,7 @@ const NotFound = () => {
               Looks like you've wandered off the sketching path!
             </p>
             <p className="text-foreground/70">
-              This page doesn't exist in our Oslo sketchbook.
+              This page doesn't exist in our sketchbook.
             </p>
           </div>
 

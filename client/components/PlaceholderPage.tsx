@@ -24,7 +24,7 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
               This page is coming soon! We're working on bringing you amazing
-              content about Oslo's sketching community.
+              content about our location's sketching community.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild variant="outline">

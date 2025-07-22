@@ -47,7 +47,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Urban Sketchers Oslo brand colors
+        // Urban Sketchers brand colors
         sketch: {
           blue: "hsl(var(--sketch-blue))", // Oslo fjord blue
           charcoal: "hsl(var(--sketch-charcoal))", // Drawing charcoal

@@ -51,7 +51,7 @@ export function Layout({ children }: LayoutProps) {
                 <div className="text-lg font-bold text-sketch-charcoal">
                   Urban Sketchers
                 </div>
-                <div className="text-sm text-sketch-blue -mt-1">Oslo</div>
+                <div className="text-sm text-sketch-blue -mt-1">Location</div>
               </div>
             </Link>
 
@@ -147,15 +147,15 @@ export function Layout({ children }: LayoutProps) {
                   <Palette className="h-6 w-6 text-sketch-blue" />
                 </div>
                 <div>
-                  <div className="text-lg font-bold">Urban Sketchers Oslo</div>
+                  <div className="text-lg font-bold">Urban Sketchers</div>
                   <div className="text-sm text-sketch-paper/80">
-                    Drawing Oslo, one sketch at a time
+                    Drawing a location, one sketch at a time
                   </div>
                 </div>
               </div>
               <p className="text-sm text-sketch-paper/70 max-w-md leading-relaxed">
                 Join our vibrant community of artists who capture the essence of
-                Oslo through on-location drawing. From fjord views to city
+                our location through on-location drawing. From fjord views to city
                 streets, we sketch the stories of our beautiful city.
               </p>
             </div>
@@ -206,7 +206,7 @@ export function Layout({ children }: LayoutProps) {
                 </Button>
               </div>
               <div className="mt-4 text-sm text-sketch-paper/70">
-                <p>Follow @urbansketchersoslo</p>
+                <p>Follow @urbansketchers</p>
                 <p className="mt-1">Join our Flickr group</p>
               </div>
             </div>
@@ -214,7 +214,7 @@ export function Layout({ children }: LayoutProps) {
 
           <div className="border-t border-sketch-paper/20 mt-8 pt-6 text-center text-sm text-sketch-paper/60">
             <p>
-              &copy; 2024 Urban Sketchers Oslo. Part of the global Urban
+              &copy; 2025 Urban Sketchers. Part of the global Urban
               Sketchers community.
             </p>
           </div>
