@@ -15,7 +15,7 @@ export const client = isConfigured
   : null;
 
 // GROQ queries for events
-export const eventsQuery = `*[_type == "event" && dateTime(date + "T" + time) > now()] | order(date asc) {
+export const eventsQuery = `*[_type == "event"] | order(date asc) {
   _id,
   title,
   description,
