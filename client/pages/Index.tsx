@@ -103,9 +103,9 @@ export default function Index() {
           }}
         ></div>
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sketch-blue/20 via-transparent to-sketch-charcoal/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-sketch-blue/30 via-black/20 to-sketch-charcoal/40"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-white/90 text-sketch-blue border-white/20 hover:bg-white backdrop-blur-sm">
