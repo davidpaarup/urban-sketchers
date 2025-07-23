@@ -25,7 +25,7 @@ import { urlFor } from "@/lib/sanity";
 import { useCommunityHighlights } from "@/hooks/useCommunityHighlights";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
-import { CITY_NAME, EVENT_FREQUENCY } from "@/lib/constants";
+import { CITY_NAME, EVENT_FREQUENCY, ACTIVE_MEMBERS } from "@/lib/constants";
 
 export default function Index() {
   const { data: upcomingEvents, isLoading, error } = useUpcomingEvents();
@@ -107,7 +107,7 @@ export default function Index() {
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white backdrop-blur-md bg-black/30 rounded-full px-8 py-4 border border-white/20">
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
-                <span>150+ active members</span>
+                <span>{ACTIVE_MEMBERS}+ active members</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
