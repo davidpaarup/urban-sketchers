@@ -80,8 +80,7 @@ export default function Index() {
             </h1>
 
             <p className="text-lg lg:text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl [text-shadow:_1px_1px_3px_rgb(0_0_0_/_70%)]">
-              Join our vibrant community of artists capturing the essence of our
-              location through on-location drawing.
+              Join our vibrant community of artists capturing the essence of {CITY_NAME} through on-location drawing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
