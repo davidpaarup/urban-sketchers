@@ -217,9 +217,6 @@ export function Layout({ children }: LayoutProps) {
                   </a>
                 </Button>
               </div>
-              <div className="mt-4 text-sm text-sketch-paper/70">
-                <p>Follow @urbansketchers</p>
-              </div>
             </div>
           </div>
 
