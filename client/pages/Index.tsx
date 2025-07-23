@@ -22,9 +22,11 @@ import {
   formatEventTime,
 } from "@/hooks/useEvents";
 import { urlFor } from "@/lib/sanity";
+import { useCommunityHighlights } from "@/hooks/useCommunityHighlights";
 
 export default function Index() {
   const { data: upcomingEvents, isLoading, error } = useUpcomingEvents();
+  const { data: communityHighlights, isLoading: highlightsLoading, error: highlightsError } = useCommunityHighlights();
 
   // Fallback events for when CMS is not connected
   const fallbackEvents = [
@@ -57,7 +59,7 @@ export default function Index() {
     },
   ];
 
-  const communityHighlights = [
+  const fallbackHighlights = [
     {
       artist: "Nina K.",
       artwork: "Oslo Central Station",
@@ -83,6 +85,11 @@ export default function Index() {
     upcomingEvents && upcomingEvents.length > 0
       ? upcomingEvents.slice(0, 3)
       : fallbackEvents;
+
+  const highlightsToDisplay =
+    communityHighlights && communityHighlights.length > 0
+      ? communityHighlights
+      : fallbackHighlights;
 
   return (
     <Layout>
@@ -326,42 +333,52 @@ export default function Index() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {communityHighlights.map((highlight, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-lg transition-all cursor-pointer"
-              >
-                <CardContent className="p-0">
-                  <div className="aspect-square bg-gradient-to-br from-sketch-paper to-oslo-snow rounded-t-lg relative overflow-hidden">
-                    <div className="absolute inset-0 bg-sketch-charcoal/5 flex items-center justify-center">
-                      <div className="text-center">
-                        <Palette className="h-12 w-12 text-sketch-blue/40 mx-auto mb-2" />
-                        <p className="text-sm text-foreground/60">
-                          "{highlight.artwork}"
-                        </p>
+          {highlightsLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-sketch-blue" />
+            </div>
+          ) : highlightsError ? (
+            <p className="text-center text-sm text-orange-600">
+              Error loading community highlights: {highlightsError.message}
+            </p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {highlightsToDisplay.map((highlight, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-lg transition-all cursor-pointer"
+                >
+                  <CardContent className="p-0">
+                    <div className="aspect-square bg-gradient-to-br from-sketch-paper to-oslo-snow rounded-t-lg relative overflow-hidden">
+                      <div className="absolute inset-0 bg-sketch-charcoal/5 flex items-center justify-center">
+                        <div className="text-center">
+                          <Palette className="h-12 w-12 text-sketch-blue/40 mx-auto mb-2" />
+                          <p className="text-sm text-foreground/60">
+                            "{highlight.artwork}"
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-semibold text-sketch-charcoal">
-                        by {highlight.artist}
-                      </h3>
-                      <div className="flex items-center text-sm text-foreground/60">
-                        <Heart className="h-3 w-3 mr-1 text-red-500" />
-                        {highlight.likes}
+                    <div className="p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="font-semibold text-sketch-charcoal">
+                          by {highlight.artist}
+                        </h3>
+                        <div className="flex items-center text-sm text-foreground/60">
+                          <Heart className="h-3 w-3 mr-1 text-red-500" />
+                          {highlight.likes}
+                        </div>
                       </div>
+                      <p className="text-sm text-foreground/70">
+                        {highlight.medium}
+                      </p>
                     </div>
-                    <p className="text-sm text-foreground/70">
-                      {highlight.medium}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
 
           <div className="mt-8 text-center sm:hidden">
             <Button asChild variant="outline">
