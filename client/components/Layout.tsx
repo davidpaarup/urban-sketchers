@@ -155,8 +155,8 @@ export function Layout({ children }: LayoutProps) {
               </div>
               <p className="text-sm text-sketch-paper/70 max-w-md leading-relaxed">
                 Join our vibrant community of artists who capture the essence of
-                our location through on-location drawing. From fjord views to city
-                streets, we sketch the stories of our beautiful city.
+                our location through on-location drawing. From fjord views to
+                city streets, we sketch the stories of our beautiful city.
               </p>
             </div>
 
@@ -214,8 +214,8 @@ export function Layout({ children }: LayoutProps) {
 
           <div className="border-t border-sketch-paper/20 mt-8 pt-6 text-center text-sm text-sketch-paper/60">
             <p>
-              &copy; 2025 Urban Sketchers. Part of the global Urban
-              Sketchers community.
+              &copy; 2025 Urban Sketchers. Part of the global Urban Sketchers
+              community.
             </p>
           </div>
         </div>

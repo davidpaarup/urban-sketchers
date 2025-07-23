@@ -21,7 +21,7 @@ export function useCommunityHighlights() {
           medium,
           likes,
           image
-        }`
+        }`,
       )
       .then((results) => {
         setData(results);

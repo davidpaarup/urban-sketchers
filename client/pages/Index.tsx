@@ -26,7 +26,11 @@ import { useCommunityHighlights } from "@/hooks/useCommunityHighlights";
 
 export default function Index() {
   const { data: upcomingEvents, isLoading, error } = useUpcomingEvents();
-  const { data: communityHighlights, isLoading: highlightsLoading, error: highlightsError } = useCommunityHighlights();
+  const {
+    data: communityHighlights,
+    isLoading: highlightsLoading,
+    error: highlightsError,
+  } = useCommunityHighlights();
 
   // Fallback events for when CMS is not connected
   const fallbackEvents = [
@@ -99,7 +103,8 @@ export default function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/32991341/pexels-photo-32991341.jpeg)',
+            backgroundImage:
+              "url(https://images.pexels.com/photos/32991341/pexels-photo-32991341.jpeg)",
           }}
         ></div>
         {/* Dark overlay for better text readability */}
@@ -114,14 +119,17 @@ export default function Index() {
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
-              Drawing our location, <span className="text-blue-300 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">One Sketch</span>{" "}
+              Drawing our location,{" "}
+              <span className="text-blue-300 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
+                One Sketch
+              </span>{" "}
               at a Time
             </h1>
 
             <p className="text-lg lg:text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl [text-shadow:_1px_1px_3px_rgb(0_0_0_/_70%)]">
-              Join our vibrant community of artists capturing the essence of
-              our location through on-location drawing. From the fjord to the forests,
-              we sketch the stories of our beautiful city.
+              Join our vibrant community of artists capturing the essence of our
+              location through on-location drawing. From the fjord to the
+              forests, we sketch the stories of our beautiful city.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -201,8 +209,8 @@ export default function Index() {
                   Tell Stories
                 </h3>
                 <p className="text-foreground/70">
-                  Our drawings document our location's places and moments, creating a
-                  visual diary of our city.
+                  Our drawings document our location's places and moments,
+                  creating a visual diary of our city.
                 </p>
               </CardContent>
             </Card>
@@ -265,7 +273,11 @@ export default function Index() {
                     {event.image && (
                       <div className="mb-4 rounded-lg overflow-hidden aspect-video bg-muted">
                         <img
-                          src={urlFor(event.image).width(600).height(338).fit('crop').url()}
+                          src={urlFor(event.image)
+                            .width(600)
+                            .height(338)
+                            .fit("crop")
+                            .url()}
                           alt={event.title}
                           className="w-full h-full object-cover"
                           loading="lazy"
@@ -362,7 +374,11 @@ export default function Index() {
                     <div className="aspect-square bg-gradient-to-br from-sketch-paper to-oslo-snow rounded-t-lg relative overflow-hidden">
                       {highlight.image ? (
                         <img
-                          src={urlFor(highlight.image).width(600).height(600).fit('crop').url()}
+                          src={urlFor(highlight.image)
+                            .width(600)
+                            .height(600)
+                            .fit("crop")
+                            .url()}
                           alt={highlight.artwork}
                           className="w-full h-full object-cover"
                           loading="lazy"
@@ -418,9 +434,9 @@ export default function Index() {
               Ready to Start Sketching our location?
             </h2>
             <p className="text-lg mb-8 text-blue-100">
-              Join our welcoming community and discover our location through the eyes of
-              an artist. All skill levels welcome – bring your curiosity and
-              we'll provide the rest.
+              Join our welcoming community and discover our location through the
+              eyes of an artist. All skill levels welcome – bring your curiosity
+              and we'll provide the rest.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
