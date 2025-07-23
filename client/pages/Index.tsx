@@ -368,11 +368,7 @@ export default function Index() {
                   onClick={() => {
                     if (highlight.image) {
                       setOpenImage({
-                        url: urlFor(highlight.image)
-                          .width(1200)
-                          .height(1200)
-                          .fit("crop")
-                          .url(),
+                        url: urlFor(highlight.image).url(),
                         alt: highlight.artwork,
                       });
                     }
@@ -485,7 +481,7 @@ export default function Index() {
             <img
               src={openImage.url}
               alt={openImage.alt}
-              className="max-h-[80vh] max-w-full rounded-lg shadow-2xl"
+              className="max-h-[80vh] max-w-full h-auto w-auto rounded-lg shadow-2xl"
               style={{ background: "#fff" }}
             />
           )}
