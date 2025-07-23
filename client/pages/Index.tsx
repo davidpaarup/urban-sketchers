@@ -438,7 +438,7 @@ export default function Index() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/10"
+                className="border-white bg-white/10 text-white hover:bg-white/20 backdrop-blur-md"
               >
                 <a
                   href="https://instagram.com/urbansketchers"
