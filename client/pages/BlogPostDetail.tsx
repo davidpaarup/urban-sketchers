@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { client, BlogPost, urlFor } from "@/lib/sanity";
 import { Layout } from "@/components/Layout";
+import { PortableText } from "@portabletext/react";
 
 export default function BlogPostDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -51,14 +52,10 @@ export default function BlogPostDetail() {
               />
             )}
             <div className="prose max-w-none">
-              {/* Render the body as plain text for now. For rich text, use a portable text renderer if available. */}
-              {post.body && Array.isArray(post.body)
-                ? post.body.map((block: any, i: number) =>
-                    block.children ? (
-                      <p key={i}>{block.children.map((child: any) => child.text).join(' ')}</p>
-                    ) : null
-                  )
-                : null}
+              {/* Render the body using PortableText for rich text support */}
+              {post.body && (
+                <PortableText value={post.body} />
+              )}
             </div>
           </article>
         )}
