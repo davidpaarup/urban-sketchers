@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { CITY_NAME, INSTAGRAM_URL, FACEBOOK_URL, MAILTO_URL, CONTACT_EMAIL } from "@/lib/constants";
+import { CITY_NAME, INSTAGRAM_URL, FACEBOOK_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,6 +25,7 @@ export function Layout({ children }: LayoutProps) {
     { name: "About", href: "/about" },
     { name: "Events", href: "/events" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Blog", href: "/blog" },
     { name: "Join us", href: "/join" },
   ];
 

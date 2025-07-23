@@ -41,6 +41,25 @@ export const pastEventsQuery = `*[_type == "event" && dateTime(date + "T" + time
   image
 }`;
 
+// GROQ query for blog posts
+export const blogPostsQuery = `*[_type == "blogPost" && defined(publishedAt) && !(_id in path('drafts.**'))] | order(publishedAt desc) {
+  _id,
+  title,
+  slug,
+  publishedAt,
+  mainImage,
+  body
+}`;
+
+export interface BlogPost {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  publishedAt: string;
+  mainImage?: any;
+  body?: any;
+}
+
 // Event type definition
 export interface Event {
   _id: string;
