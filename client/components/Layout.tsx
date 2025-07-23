@@ -27,7 +27,7 @@ export function Layout({ children }: LayoutProps) {
     { name: "About", href: "/about" },
     { name: "Events", href: "/events" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Join Us", href: "/join" },
+    { name: "Join us", href: "/join" },
   ];
 
   const isActivePath = (path: string) => {
@@ -155,8 +155,7 @@ export function Layout({ children }: LayoutProps) {
               </div>
               <p className="text-sm text-sketch-paper/70 max-w-md leading-relaxed">
                 Join our vibrant community of artists who capture the essence of
-                our location through on-location drawing. From fjord views to
-                city streets, we sketch the stories of our beautiful city.
+                our location through on-location drawing.
               </p>
             </div>
 
@@ -207,7 +206,6 @@ export function Layout({ children }: LayoutProps) {
               </div>
               <div className="mt-4 text-sm text-sketch-paper/70">
                 <p>Follow @urbansketchers</p>
-                <p className="mt-1">Join our Flickr group</p>
               </div>
             </div>
           </div>

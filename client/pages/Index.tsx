@@ -115,21 +115,20 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center bg-black/20 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
             <Badge className="mb-6 bg-white/90 text-sketch-blue border-white/20 hover:bg-white backdrop-blur-sm">
               <Palette className="h-3 w-3 mr-1" />
-              Our Chapter
+              Our chapter
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
               Drawing our location,{" "}
               <span className="text-blue-300 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
-                One Sketch
+                one sketch
               </span>{" "}
-              at a Time
+              at a time
             </h1>
 
             <p className="text-lg lg:text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl [text-shadow:_1px_1px_3px_rgb(0_0_0_/_70%)]">
               Join our vibrant community of artists capturing the essence of our
-              location through on-location drawing. From the fjord to the
-              forests, we sketch the stories of our beautiful city.
+              location through on-location drawing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -139,7 +138,7 @@ export default function Index() {
                 className="bg-sketch-blue hover:bg-sketch-blue/90 text-white"
               >
                 <Link to="/join">
-                  Join Our Community
+                  Join our community
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -149,22 +148,22 @@ export default function Index() {
                 size="lg"
                 className="border-white bg-white/10 text-white hover:bg-white/20 backdrop-blur-md"
               >
-                <Link to="/events">View Upcoming Events</Link>
+                <Link to="/events">View upcoming events</Link>
               </Button>
             </div>
 
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white backdrop-blur-md bg-black/30 rounded-full px-8 py-4 border border-white/20">
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
-                <span>150+ Active Members</span>
+                <span>150+ active members</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>Weekly Events</span>
+                <span>Weekly events</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>All Over our location</span>
+                <span>All over our location</span>
               </div>
             </div>
           </div>
@@ -176,7 +175,7 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-sketch-charcoal mb-4">
-              The Urban Sketchers Way
+              The Urban Sketchers way
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
               We follow the Urban Sketchers manifesto, drawing on location and
@@ -191,7 +190,7 @@ export default function Index() {
                   <Compass className="h-6 w-6 text-sketch-blue" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">
-                  Draw on Location
+                  Draw on location
                 </h3>
                 <p className="text-foreground/70">
                   We capture what we see from direct observation, whether
@@ -206,7 +205,7 @@ export default function Index() {
                   <Camera className="h-6 w-6 text-sketch-sunset" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">
-                  Tell Stories
+                  Tell stories
                 </h3>
                 <p className="text-foreground/70">
                   Our drawings document our location's places and moments,
@@ -221,7 +220,7 @@ export default function Index() {
                   <Users className="h-6 w-6 text-sketch-forest" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-sketch-charcoal">
-                  Support Each Other
+                  Support each other
                 </h3>
                 <p className="text-foreground/70">
                   We draw together, learn from each other, and share our work to
@@ -239,7 +238,7 @@ export default function Index() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-sketch-charcoal mb-2">
-                Upcoming Events
+                Upcoming events
               </h2>
               <p className="text-foreground/70">
                 Join us for our next sketching adventures around our location
@@ -252,7 +251,7 @@ export default function Index() {
             </div>
             <Button asChild variant="outline" className="hidden sm:flex">
               <Link to="/events">
-                View All Events
+                View all events
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -327,7 +326,7 @@ export default function Index() {
           <div className="mt-8 text-center sm:hidden">
             <Button asChild variant="outline">
               <Link to="/events">
-                View All Events
+                View all events
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -341,7 +340,7 @@ export default function Index() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-sketch-charcoal mb-2">
-                Community Highlights
+                Community highlights
               </h2>
               <p className="text-foreground/70">
                 Recent sketches from our talented artists
@@ -349,7 +348,7 @@ export default function Index() {
             </div>
             <Button asChild variant="outline" className="hidden sm:flex">
               <Link to="/gallery">
-                View Gallery
+                View gallery
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -418,7 +417,7 @@ export default function Index() {
           <div className="mt-8 text-center sm:hidden">
             <Button asChild variant="outline">
               <Link to="/gallery">
-                View Gallery
+                View gallery
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -431,7 +430,7 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ready to Start Sketching our location?
+              Ready to start sketching our location?
             </h2>
             <p className="text-lg mb-8 text-blue-100">
               Join our welcoming community and discover our location through the
@@ -446,7 +445,7 @@ export default function Index() {
                 className="bg-white text-sketch-blue hover:bg-gray-50"
               >
                 <Link to="/join">
-                  Join Our Community
+                  Join our community
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

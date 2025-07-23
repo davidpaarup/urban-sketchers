@@ -37,7 +37,7 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
                 asChild
                 className="bg-sketch-blue hover:bg-sketch-blue/90"
               >
-                <Link to="/join">Join Our Community</Link>
+                <Link to="/join">Join our community</Link>
               </Button>
             </div>
           </div>
