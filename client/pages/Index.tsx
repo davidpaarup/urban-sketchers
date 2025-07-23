@@ -139,7 +139,7 @@ export default function Index() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/10 backdrop-blur-sm"
+                className="border-white bg-white/10 text-white hover:bg-white/20 backdrop-blur-md"
               >
                 <Link to="/events">View Upcoming Events</Link>
               </Button>
