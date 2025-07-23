@@ -113,12 +113,12 @@ export default function Index() {
               Our Chapter
             </Badge>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-              Drawing our location, <span className="text-sketch-blue drop-shadow-md">One Sketch</span>{" "}
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
+              Drawing our location, <span className="text-blue-300 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">One Sketch</span>{" "}
               at a Time
             </h1>
 
-            <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-lg lg:text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl [text-shadow:_1px_1px_3px_rgb(0_0_0_/_70%)]">
               Join our vibrant community of artists capturing the essence of
               our location through on-location drawing. From the fjord to the forests,
               we sketch the stories of our beautiful city.
