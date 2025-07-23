@@ -7,6 +7,12 @@ export function useCommunityHighlights() {
   const [error, setError] = useState<null | Error>(null);
 
   useEffect(() => {
+    if (!client) {
+      setData([]);
+      setIsLoading(false);
+      return;
+    }
+
     client
       .fetch(
         `*[_type == "communityHighlight"] | order(_createdAt desc)[0...3]{
