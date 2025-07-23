@@ -22,17 +22,14 @@ export function urlFor(source: any) {
 }
 
 // GROQ queries for events
-export const eventsQuery = `*[_type == "event"] | order(date asc) {
+export const eventsQuery = `*[_type == "event" && date >= now()] | order(date asc) {
   _id,
   title,
   description,
   date,
   time,
   location,
-  maxAttendees,
-  "currentAttendees": count(*[_type == "registration" && event._ref == ^._id]),
   image,
-  skillLevel,
   tags
 }`;
 

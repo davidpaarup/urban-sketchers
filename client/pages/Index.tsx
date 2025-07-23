@@ -37,68 +37,14 @@ export default function Index() {
 
   const [openImage, setOpenImage] = useState<null | { url: string; alt: string }>(null);
 
-  // Fallback events for when CMS is not connected
-  const fallbackEvents = [
-    {
-      _id: "1",
-      title: "New Year Sketch Walk: Akershus Fortress",
-      date: "2024-01-04",
-      time: "10:00",
-      location: "Akershus Fortress",
-      currentAttendees: 18,
-      image: undefined,
-    },
-    {
-      _id: "2",
-      title: "Winter Portraits Workshop",
-      date: "2024-01-12",
-      time: "13:00",
-      location: "Tjuvholmen Art Museum",
-      currentAttendees: 10,
-      image: undefined,
-    },
-    {
-      _id: "3",
-      title: "Sketching the Northern Lights",
-      date: "2024-01-17",
-      time: "19:30",
-      location: "Ekeberg Park",
-      currentAttendees: 22,
-      image: undefined,
-    },
-  ];
-
-  const fallbackHighlights = [
-    {
-      artist: "Nina K.",
-      artwork: `${CITY_NAME} Central Station`,
-      medium: "Watercolor & Ink",
-      likes: 47,
-    },
-    {
-      artist: "Erik M.",
-      artwork: "Aker Brygge Morning",
-      medium: "Pencil Sketch",
-      likes: 32,
-    },
-    {
-      artist: "Sara L.",
-      artwork: "Holmenkollen View",
-      medium: "Digital Sketch",
-      likes: 58,
-    },
-  ];
+  
 
   // Use CMS events if available, otherwise fallback
   const eventsToDisplay =
-    upcomingEvents && upcomingEvents.length > 0
-      ? upcomingEvents.slice(0, 3)
-      : fallbackEvents;
+    upcomingEvents?.slice(0, 3) ?? [];
 
   const highlightsToDisplay =
-    communityHighlights && communityHighlights.length > 0
-      ? communityHighlights
-      : fallbackHighlights;
+    communityHighlights?.slice(0, 3) ?? [];
 
   return (
     <Layout>
@@ -295,10 +241,6 @@ export default function Index() {
                       >
                         {formatEventDate(event.date)}
                       </Badge>
-                      <div className="flex items-center text-sm text-foreground/60">
-                        <Users className="h-3 w-3 mr-1" />
-                        {event.currentAttendees}
-                      </div>
                     </div>
 
                     <h3 className="font-semibold text-lg mb-2 text-sketch-charcoal">
