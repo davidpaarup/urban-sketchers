@@ -23,7 +23,7 @@ import {
 } from "@/hooks/useEvents";
 import { urlFor } from "@/lib/sanity";
 import { useCommunityHighlights } from "@/hooks/useCommunityHighlights";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
 import { CITY_NAME } from "@/lib/constants";
 
@@ -36,6 +36,8 @@ export default function Index() {
   } = useCommunityHighlights();
 
   const [openImage, setOpenImage] = useState<null | { url: string; alt: string }>(null);
+  // Add state for open event modal
+  const [openEvent, setOpenEvent] = useState<null | typeof eventsToDisplay[0]>(null);
 
   
 
@@ -217,7 +219,8 @@ export default function Index() {
               {eventsToDisplay.map((event) => (
                 <Card
                   key={event._id}
-                  className="hover:shadow-lg transition-shadow"
+                  className="hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => setOpenEvent(event)}
                 >
                   <CardContent className="p-6">
                     {event.image && (
@@ -423,6 +426,55 @@ export default function Index() {
               className="max-h-[80vh] max-w-full h-auto w-auto rounded-lg shadow-2xl"
               style={{ background: "#fff" }}
             />
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Modal for expanded event */}
+      <Dialog open={!!openEvent} onOpenChange={() => setOpenEvent(null)}>
+        <DialogContent className="max-w-xl focus:outline-none focus:ring-0">
+          {openEvent && (
+            <div>
+              {openEvent.image && (
+                <div className="mb-4 rounded-lg overflow-hidden aspect-video bg-muted">
+                  <img
+                    src={urlFor(openEvent.image)
+                      .width(800)
+                      .height(450)
+                      .fit("crop")
+                      .url()}
+                    alt={openEvent.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <DialogTitle className="mb-2">{openEvent.title}</DialogTitle>
+              <div className="flex items-center gap-2 mb-2">
+                <Badge variant="secondary" className="bg-sketch-blue/10 text-sketch-blue">
+                  {formatEventDate(openEvent.date)}
+                </Badge>
+                <span className="flex items-center text-sm text-foreground/70">
+                  <Clock className="h-3 w-3 mr-1" />
+                  {formatEventTime(openEvent.time)}
+                </span>
+                <span className="flex items-center text-sm text-foreground/70">
+                  <MapPin className="h-3 w-3 mr-1" />
+                  {openEvent.location}
+                </span>
+              </div>
+              {openEvent.tags && openEvent.tags.length > 0 && (
+                <div className="mb-2 flex flex-wrap gap-2">
+                  {openEvent.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+              <DialogDescription className="mt-2 whitespace-pre-line">
+                {openEvent.description || "No description provided."}
+              </DialogDescription>
+            </div>
           )}
         </DialogContent>
       </Dialog>
