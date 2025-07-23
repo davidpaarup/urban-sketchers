@@ -106,19 +106,19 @@ export default function Index() {
         <div className="absolute inset-0 bg-black/40"></div>
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-sketch-blue/20 via-transparent to-sketch-charcoal/30"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-sketch-blue/10 text-sketch-blue border-sketch-blue/20 hover:bg-sketch-blue/20">
+            <Badge className="mb-6 bg-white/90 text-sketch-blue border-white/20 hover:bg-white backdrop-blur-sm">
               <Palette className="h-3 w-3 mr-1" />
               Our Chapter
             </Badge>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-sketch-charcoal mb-6 leading-tight">
-              Drawing our location, <span className="text-sketch-blue">One Sketch</span>{" "}
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              Drawing our location, <span className="text-sketch-blue drop-shadow-md">One Sketch</span>{" "}
               at a Time
             </h1>
 
-            <p className="text-lg lg:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
               Join our vibrant community of artists capturing the essence of
               our location through on-location drawing. From the fjord to the forests,
               we sketch the stories of our beautiful city.
