@@ -13,7 +13,8 @@ export function useCommunityHighlights() {
           artist,
           artwork,
           medium,
-          likes
+          likes,
+          image
         }`
       )
       .then((results) => {

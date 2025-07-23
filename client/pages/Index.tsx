@@ -350,14 +350,23 @@ export default function Index() {
                 >
                   <CardContent className="p-0">
                     <div className="aspect-square bg-gradient-to-br from-sketch-paper to-oslo-snow rounded-t-lg relative overflow-hidden">
-                      <div className="absolute inset-0 bg-sketch-charcoal/5 flex items-center justify-center">
-                        <div className="text-center">
-                          <Palette className="h-12 w-12 text-sketch-blue/40 mx-auto mb-2" />
-                          <p className="text-sm text-foreground/60">
-                            "{highlight.artwork}"
-                          </p>
+                      {highlight.image ? (
+                        <img
+                          src={urlFor(highlight.image).width(600).height(600).fit('crop').url()}
+                          alt={highlight.artwork}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-sketch-charcoal/5 flex items-center justify-center">
+                          <div className="text-center">
+                            <Palette className="h-12 w-12 text-sketch-blue/40 mx-auto mb-2" />
+                            <p className="text-sm text-foreground/60">
+                              "{highlight.artwork}"
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
 
                     <div className="p-4">
