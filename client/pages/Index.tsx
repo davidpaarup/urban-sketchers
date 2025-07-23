@@ -145,7 +145,7 @@ export default function Index() {
               </Button>
             </div>
 
-            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white/80 backdrop-blur-sm bg-white/10 rounded-full px-6 py-3">
+            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white backdrop-blur-md bg-black/30 rounded-full px-8 py-4 border border-white/20">
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
                 <span>150+ Active Members</span>
