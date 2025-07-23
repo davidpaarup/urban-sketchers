@@ -25,6 +25,7 @@ import { urlFor } from "@/lib/sanity";
 import { useCommunityHighlights } from "@/hooks/useCommunityHighlights";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useState } from "react";
+import { CITY_NAME } from "@/lib/constants";
 
 export default function Index() {
   const { data: upcomingEvents, isLoading, error } = useUpcomingEvents();
@@ -70,7 +71,7 @@ export default function Index() {
   const fallbackHighlights = [
     {
       artist: "Nina K.",
-      artwork: "Oslo Central Station",
+      artwork: `${CITY_NAME} Central Station`,
       medium: "Watercolor & Ink",
       likes: 47,
     },
@@ -119,11 +120,11 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center bg-black/20 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
             <Badge className="mb-6 bg-white/90 text-sketch-blue border-white/20 hover:bg-white backdrop-blur-sm">
               <Palette className="h-3 w-3 mr-1" />
-              Our chapter
+              {CITY_NAME} chapter
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
-              Drawing our location,{" "}
+              Drawing {CITY_NAME},{" "}
               <span className="text-blue-300 drop-shadow-2xl [text-shadow:_2px_2px_4px_rgb(0_0_0_/_80%)]">
                 one sketch
               </span>{" "}
@@ -167,7 +168,7 @@ export default function Index() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>All over our location</span>
+                <span>All over {CITY_NAME}</span>
               </div>
             </div>
           </div>
@@ -183,7 +184,7 @@ export default function Index() {
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
               We follow the Urban Sketchers manifesto, drawing on location and
-              sharing our perspective of our location with the world.
+              sharing our perspective of {CITY_NAME} with the world.
             </p>
           </div>
 
@@ -198,7 +199,7 @@ export default function Index() {
                 </h3>
                 <p className="text-foreground/70">
                   We capture what we see from direct observation, whether
-                  indoors or outdoors across our location.
+                  indoors or outdoors across {CITY_NAME}.
                 </p>
               </CardContent>
             </Card>
@@ -212,7 +213,7 @@ export default function Index() {
                   Tell stories
                 </h3>
                 <p className="text-foreground/70">
-                  Our drawings document our location's places and moments,
+                  Our drawings document {CITY_NAME}'s places and moments,
                   creating a visual diary of our city.
                 </p>
               </CardContent>
@@ -245,7 +246,7 @@ export default function Index() {
                 Upcoming events
               </h2>
               <p className="text-foreground/70">
-                Join us for our next sketching adventures around our location
+                Join us for our next sketching adventures around {CITY_NAME}
               </p>
               {error && (
                 <p className="text-sm text-orange-600 mt-1">
@@ -435,10 +436,10 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ready to start sketching our location?
+              Ready to start sketching {CITY_NAME}?
             </h2>
             <p className="text-lg mb-8 text-blue-100">
-              Join our welcoming community and discover our location through the
+              Join our welcoming community and discover {CITY_NAME} through the
               eyes of an artist. All skill levels welcome – bring your curiosity
               and we'll provide the rest.
             </p>

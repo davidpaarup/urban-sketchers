@@ -49,11 +49,11 @@ export default {
         },
         // Urban Sketchers brand colors
         sketch: {
-          blue: "hsl(var(--sketch-blue))", // Oslo fjord blue
+          blue: "hsl(var(--sketch-blue))", // CITY_NAME fjord blue
           charcoal: "hsl(var(--sketch-charcoal))", // Drawing charcoal
           paper: "hsl(var(--sketch-paper))", // Sketch paper cream
           ink: "hsl(var(--sketch-ink))", // Drawing ink
-          sunset: "hsl(var(--sketch-sunset))", // Oslo sunset orange
+          sunset: "hsl(var(--sketch-sunset))", // CITY_NAME sunset orange
           forest: "hsl(var(--sketch-forest))", // Norwegian forest green
         },
         oslo: {

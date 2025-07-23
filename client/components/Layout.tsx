@@ -4,15 +4,13 @@ import {
   Menu,
   X,
   Palette,
-  Calendar,
-  Users,
-  Camera,
   Instagram,
   Facebook,
   Mail,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { CITY_NAME } from "@/lib/constants";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -51,7 +49,7 @@ export function Layout({ children }: LayoutProps) {
                 <div className="text-lg font-bold text-sketch-charcoal">
                   Urban Sketchers
                 </div>
-                <div className="text-sm text-sketch-blue -mt-1">Location</div>
+                <div className="text-sm text-sketch-blue -mt-1">{CITY_NAME}</div>
               </div>
             </Link>
 
@@ -149,13 +147,12 @@ export function Layout({ children }: LayoutProps) {
                 <div>
                   <div className="text-lg font-bold">Urban Sketchers</div>
                   <div className="text-sm text-sketch-paper/80">
-                    Drawing a location, one sketch at a time
+                    Drawing {CITY_NAME}, one sketch at a time
                   </div>
                 </div>
               </div>
               <p className="text-sm text-sketch-paper/70 max-w-md leading-relaxed">
-                Join our vibrant community of artists who capture the essence of
-                our location through on-location drawing.
+                Join our vibrant community of artists who capture the essence of {CITY_NAME} through on-location drawing.
               </p>
             </div>
 
@@ -226,7 +223,7 @@ export function Layout({ children }: LayoutProps) {
 
           <div className="border-t border-sketch-paper/20 mt-8 pt-6 text-center text-sm text-sketch-paper/60">
             <p>
-              &copy; 2025 Urban Sketchers. Part of the global Urban Sketchers
+              &copy; 2025 Urban Sketchers {CITY_NAME}. Part of the global Urban Sketchers
               community.
             </p>
           </div>
