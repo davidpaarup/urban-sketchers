@@ -17,6 +17,7 @@ export const client = isConfigured
 
 // Helper to build image URLs from Sanity image objects
 export function urlFor(source: any) {
+  if (!client) return null;
   return imageUrlBuilder(client).image(source);
 }
 
