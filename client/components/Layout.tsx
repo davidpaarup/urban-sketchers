@@ -187,14 +187,28 @@ export function Layout({ children }: LayoutProps) {
                   size="icon"
                   className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
                 >
+                  <a
+                    href="https://www.instagram.com/urbansketchers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
                   <Instagram className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
                   className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
                 >
-                  <Facebook className="h-4 w-4" />
+                  <a
+                    href="https://www.facebook.com/urbansketchers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button
                   variant="ghost"

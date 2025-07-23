@@ -23,6 +23,8 @@ import {
 } from "@/hooks/useEvents";
 import { urlFor } from "@/lib/sanity";
 import { useCommunityHighlights } from "@/hooks/useCommunityHighlights";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { useState } from "react";
 
 export default function Index() {
   const { data: upcomingEvents, isLoading, error } = useUpcomingEvents();
@@ -31,6 +33,8 @@ export default function Index() {
     isLoading: highlightsLoading,
     error: highlightsError,
   } = useCommunityHighlights();
+
+  const [openImage, setOpenImage] = useState<null | { url: string; alt: string }>(null);
 
   // Fallback events for when CMS is not connected
   const fallbackEvents = [
@@ -310,13 +314,6 @@ export default function Index() {
                         {event.location}
                       </div>
                     </div>
-
-                    <Button
-                      className="w-full mt-4 bg-sketch-blue hover:bg-sketch-blue/90"
-                      size="sm"
-                    >
-                      Join Event
-                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -368,6 +365,18 @@ export default function Index() {
                 <Card
                   key={index}
                   className="group hover:shadow-lg transition-all cursor-pointer"
+                  onClick={() => {
+                    if (highlight.image) {
+                      setOpenImage({
+                        url: urlFor(highlight.image)
+                          .width(1200)
+                          .height(1200)
+                          .fit("crop")
+                          .url(),
+                        alt: highlight.artwork,
+                      });
+                    }
+                  }}
                 >
                   <CardContent className="p-0">
                     <div className="aspect-square bg-gradient-to-br from-sketch-paper to-oslo-snow rounded-t-lg relative overflow-hidden">
@@ -468,6 +477,20 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Modal for expanded image */}
+      <Dialog open={!!openImage} onOpenChange={() => setOpenImage(null)}>
+        <DialogContent className="max-w-3xl p-0 bg-transparent shadow-none flex items-center justify-center border-0 focus:outline-none focus:ring-0">
+          {openImage && (
+            <img
+              src={openImage.url}
+              alt={openImage.alt}
+              className="max-h-[80vh] max-w-full rounded-lg shadow-2xl"
+              style={{ background: "#fff" }}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 }
