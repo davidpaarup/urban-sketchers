@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { CITY_NAME } from "@/lib/constants";
+import { CITY_NAME, INSTAGRAM_URL, FACEBOOK_URL, MAILTO_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -185,7 +185,7 @@ export function Layout({ children }: LayoutProps) {
                   className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
                 >
                   <a
-                    href="https://www.instagram.com/urbansketchers/"
+                    href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -199,7 +199,7 @@ export function Layout({ children }: LayoutProps) {
                   className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
                 >
                   <a
-                    href="https://www.facebook.com/urbansketchers/"
+                    href={FACEBOOK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -212,7 +212,9 @@ export function Layout({ children }: LayoutProps) {
                   size="icon"
                   className="h-8 w-8 text-sketch-paper/70 hover:text-sketch-paper hover:bg-sketch-paper/10"
                 >
-                  <Mail className="h-4 w-4" />
+                  <a href={`mailto:${CONTACT_EMAIL}`}>
+                    <Mail className="h-4 w-4" />
+                  </a>
                 </Button>
               </div>
               <div className="mt-4 text-sm text-sketch-paper/70">
