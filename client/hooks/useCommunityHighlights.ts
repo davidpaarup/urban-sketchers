@@ -15,7 +15,7 @@ export function useCommunityHighlights() {
 
     client
       .fetch(
-        `*[_type == "communityHighlight"] | order(_createdAt desc)[0...3]{
+        `*[_type == "communityHighlight"] | order(_createdAt desc){
           artist,
           artwork,
           medium,
