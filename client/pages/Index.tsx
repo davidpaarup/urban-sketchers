@@ -21,6 +21,7 @@ import {
   formatEventDate,
   formatEventTime,
 } from "@/hooks/useEvents";
+import { urlFor } from "@/lib/sanity";
 
 export default function Index() {
   const { data: upcomingEvents, isLoading, error } = useUpcomingEvents();
@@ -34,6 +35,7 @@ export default function Index() {
       time: "10:00",
       location: "Akershus Fortress",
       currentAttendees: 18,
+      image: undefined,
     },
     {
       _id: "2",
@@ -42,6 +44,7 @@ export default function Index() {
       time: "13:00",
       location: "Tjuvholmen Art Museum",
       currentAttendees: 10,
+      image: undefined,
     },
     {
       _id: "3",
@@ -50,6 +53,7 @@ export default function Index() {
       time: "19:30",
       location: "Ekeberg Park",
       currentAttendees: 22,
+      image: undefined,
     },
   ];
 
@@ -241,6 +245,16 @@ export default function Index() {
                   className="hover:shadow-lg transition-shadow"
                 >
                   <CardContent className="p-6">
+                    {event.image && (
+                      <div className="mb-4 rounded-lg overflow-hidden aspect-video bg-muted">
+                        <img
+                          src={urlFor(event.image).width(600).height(338).fit('crop').url()}
+                          alt={event.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                     <div className="flex items-start justify-between mb-3">
                       <Badge
                         variant="secondary"

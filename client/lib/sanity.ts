@@ -1,4 +1,5 @@
 import { createClient } from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
 
 // Check if running in browser and environment variables are available
 const isConfigured =
@@ -13,6 +14,11 @@ export const client = isConfigured
       token: import.meta.env.VITE_SANITY_TOKEN,
     })
   : null;
+
+// Helper to build image URLs from Sanity image objects
+export function urlFor(source: any) {
+  return imageUrlBuilder(client).image(source);
+}
 
 // GROQ queries for events
 export const eventsQuery = `*[_type == "event"] | order(date asc) {
