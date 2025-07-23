@@ -45,8 +45,8 @@ export default function Blog() {
                 />
               )}
               <div className="text-base text-gray-700 line-clamp-3">
-                {/* Show a snippet of the body if available */}
-                {post.body && Array.isArray(post.body) && post.body[0]?.children ? post.body[0].children[0]?.text : null}
+                {/* Show the excerpt if available */}
+                {post.excerpt || null}
               </div>
             </div>
           ))}

@@ -48,6 +48,7 @@ export const blogPostsQuery = `*[_type == "blogPost" && defined(publishedAt) && 
   slug,
   publishedAt,
   mainImage,
+  excerpt,
   body
 }`;
 
@@ -57,6 +58,7 @@ export interface BlogPost {
   slug: { current: string };
   publishedAt: string;
   mainImage?: any;
+  excerpt?: string;
   body?: any;
 }
 
