@@ -99,7 +99,7 @@ export default function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1036657/pexels-photo-1036657.jpeg)',
+            backgroundImage: 'url(https://images.pexels.com/photos/32991341/pexels-photo-32991341.jpeg)',
           }}
         ></div>
         {/* Dark overlay for better text readability */}
