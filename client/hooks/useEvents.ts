@@ -29,6 +29,32 @@ export function usePastEvents() {
   });
 }
 
+export function useAllEvents() {
+  return useQuery({
+    queryKey: ["events", "all"],
+    queryFn: async () => {
+      if (!client) {
+        throw new Error("Sanity client not configured");
+      }
+      // Fetch all events, newest first
+      return client.fetch<Event[]>(
+        `*[_type == "event"] | order(date desc, time desc) {
+          _id,
+          title,
+          description,
+          date,
+          time,
+          location,
+          image,
+          tags
+        }`
+      );
+    },
+    staleTime: 10 * 60 * 1000,
+    enabled: !!client,
+  });
+}
+
 // Helper function to format date for display
 export function formatEventDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
