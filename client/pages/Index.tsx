@@ -139,13 +139,13 @@ export default function Index() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-sketch-blue text-sketch-blue hover:bg-sketch-blue/10"
+                className="border-white text-white hover:bg-white/10 backdrop-blur-sm"
               >
                 <Link to="/events">View Upcoming Events</Link>
               </Button>
             </div>
 
-            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-foreground/60">
+            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white/80 backdrop-blur-sm bg-white/10 rounded-full px-6 py-3">
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
                 <span>150+ Active Members</span>
