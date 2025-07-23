@@ -347,10 +347,6 @@ export default function Index() {
                         <h3 className="font-semibold text-sketch-charcoal">
                           by {highlight.artist}
                         </h3>
-                        <div className="flex items-center text-sm text-foreground/60">
-                          <Heart className="h-3 w-3 mr-1 text-red-500" />
-                          {highlight.likes}
-                        </div>
                       </div>
                       <p className="text-sm text-foreground/70">
                         {highlight.medium}
