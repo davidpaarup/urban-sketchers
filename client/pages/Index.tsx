@@ -67,7 +67,6 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center bg-black/20 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
             <Badge className="mb-6 bg-white/90 text-sketch-blue border-white/20 hover:bg-white backdrop-blur-sm">
-              <Palette className="h-3 w-3 mr-1" />
               {CITY_NAME} chapter
             </Badge>
 

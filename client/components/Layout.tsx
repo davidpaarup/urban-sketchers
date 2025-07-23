@@ -43,9 +43,13 @@ export function Layout({ children }: LayoutProps) {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="p-2 bg-sketch-blue/10 rounded-lg group-hover:bg-sketch-blue/20 transition-colors">
-                <Palette className="h-6 w-6 text-sketch-blue" />
-              </div>
+              {/* Remove colored background div, just show the image */}
+              <img
+                src="https://gdpsacaneckruaui.public.blob.vercel-storage.com/usk.png"
+                alt="Urban Sketchers Logo"
+                className="h-8 w-8 object-contain"
+                style={{ minWidth: 32, minHeight: 32 }}
+              />
               <div className="hidden sm:block">
                 <div className="text-lg font-bold text-sketch-charcoal">
                   Urban Sketchers
@@ -142,9 +146,13 @@ export function Layout({ children }: LayoutProps) {
             {/* Brand */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-2 bg-sketch-blue/20 rounded-lg">
-                  <Palette className="h-6 w-6 text-sketch-blue" />
-                </div>
+                {/* Remove colored background div, just show the image */}
+                <img
+                  src="https://gdpsacaneckruaui.public.blob.vercel-storage.com/usk-logo-white.png"
+                  alt="Urban Sketchers Logo"
+                  className="h-8 w-8 object-contain"
+                  style={{ minWidth: 32, minHeight: 32 }}
+                />
                 <div>
                   <div className="text-lg font-bold">Urban Sketchers</div>
                   <div className="text-sm text-sketch-paper/80">
